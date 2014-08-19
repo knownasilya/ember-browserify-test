@@ -8,7 +8,8 @@
     "start": "goat -e index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "browserify -e index.js -o bundle.js",
-    "build2": "browserify -e index.js --noparse ember-data -o build.js"
+    "build2": "browserify -e index.js --noparse ember-data -o bundle.js",
+    "build3": "browserify -e index.js --noparse ember,ember-data -o bundle.js"
   },
   "author": "",
   "license": "ISC",
@@ -42,7 +43,7 @@
     "ember-data": {
       "exports": "DS",
       "depends": [
-        "ember"
+        "ember:Ember"
       ]
     }
   }
