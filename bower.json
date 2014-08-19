@@ -1,0 +1,20 @@
+{
+  "name": "ember-commonjs",
+  "version": "0.0.0",
+  "authors": [
+    "Ilya Radchenko <ilya@burstcreations.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ember": "~1.6.1",
+    "ember-data": "~1.0.0-beta.9"
+  }
+}
