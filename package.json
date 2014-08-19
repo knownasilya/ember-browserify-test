@@ -8,12 +8,7 @@
     "start": "goat -e index.html",
     "fix": "rm -rf vender && mkdir vender && derequire < ./bower_components/ember/ember.js > ./vender/ember.js && derequire < ./bower_components/ember-data/ember-data.js > ./vender/ember-data.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify -e index.js -o bundle.js",
-    "build2": "browserify -e index.js --noparse ember-data -o bundle.js",
-    "build3": "browserify -e index.js --noparse ember,ember-data -o bundle.js",
-    "build4": "cat vender/ember.js vender/ember-data.js stub.js > bundle.js",
-    "build5": "cat bower_components/ember/ember.js bower_components/ember-data/ember-data.js stub.js > bundle.js"
-
+    "build": "browserify -e index.js -o bundle.js"
   },
   "author": "",
   "license": "ISC",
@@ -42,7 +37,7 @@
       "exports": "Ember",
       "depends": [
         "jquery:jQuery",
-        "handlebars"
+        "handlebars:Handlebars"
       ]
     },
     "ember-data": {
