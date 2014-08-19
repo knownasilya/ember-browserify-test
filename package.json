@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "bower install && npm run fix",
     "start": "goat -e index.html",
-    "fix": "rm -rf vender && mkdir vender && derequire < ./bower_components/ember/ember.js > ./vender/ember.js && derequire < ./bower_components/ember-data/ember-data.js > ./vender/ember-data.js",
+    "fix": "rm -rf vendor && mkdir vendor && derequire < ./bower_components/ember/ember.js > ./vendor/ember.js && derequire < ./bower_components/ember-data/ember-data.js > ./vendor/ember-data.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "browserify -e index.js -o bundle.js"
   },
@@ -29,8 +29,8 @@
     ]
   },
   "browser": {
-    "ember": "./vender/ember.js",
-    "ember-data": "./vender/ember-data.js"
+    "ember": "./vendor/ember.js",
+    "ember-data": "./vendor/ember-data.js"
   },
   "browserify-shim": {
     "ember": {
