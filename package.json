@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "bower install",
     "start": "goat -e index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "browserify -e index.js -o bundle.js",
@@ -12,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "bower": "^1.3.9",
     "browserify": "^4.2.3",
     "browserify-shim": "^3.6.0",
     "goat": "^0.3.0"
