@@ -21,9 +21,9 @@ Adding `ember` to the noparse will create the global issue tracked [here](https:
   
 2. `ember-data` in `noparse` (`npm run build2`):
   
-  > Uncaught Error: Cannot find module '/Users/myuser/ember-commonjs/bower_components/ember/ember.js'
+  > Uncaught ReferenceError: global is not defined 
 
 3. `ember` and `ember-data` in `noparse` (`npm run build3`):
 
-  > Uncaught Error: Cannot find module '/Users/myuser/ember-commonjs/bower_components/ember/ember.js' 
+  > Uncaught Error: Cannot find module 'ember-data/core' 
   
