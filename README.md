@@ -22,6 +22,9 @@ Adding `ember` to the noparse will create the global issue tracked [here](https:
 
 ## Errors
 
+Errors exist only when not following the above solution.
+
+
 1. no `noparse` specified (`npm run build`):
 
   > Uncaught Error: Cannot find module 'ember-data/core'
