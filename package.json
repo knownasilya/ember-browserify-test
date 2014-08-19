@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "bower install",
+    "postinstall": "bower install && npm run fix",
     "start": "goat -e index.html",
+    "fix": "rm -rf vender && mkdir vender && derequire < ./bower_components/ember/ember.js > ./vender/ember.js && derequire < ./bower_components/ember-data/ember-data.js > ./vender/ember-data.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "browserify -e index.js -o bundle.js",
     "build2": "browserify -e index.js --noparse ember-data -o bundle.js",
-    "build3": "browserify -e index.js --noparse ember,ember-data -o bundle.js"
+    "build3": "browserify -e index.js --noparse ember,ember-data -o bundle.js",
+    "build4": "cat vender/ember.js vender/ember-data.js stub.js > bundle.js",
+    "build5": "cat bower_components/ember/ember.js bower_components/ember-data/ember-data.js stub.js > bundle.js"
+
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +21,8 @@
     "bower": "^1.3.9",
     "browserify": "^4.2.3",
     "browserify-shim": "^3.6.0",
-    "goat": "^0.3.0"
+    "goat": "^0.3.0",
+    "derequire": "calvinmetcalf/derequire#declarations"
   },
   "dependencies": {
     "handlebars": "^1.3.0",
@@ -29,8 +34,8 @@
     ]
   },
   "browser": {
-    "ember": "./bower_components/ember/ember.js",
-    "ember-data": "./bower_components/ember-data/ember-data.js"
+    "ember": "./vender/ember.js",
+    "ember-data": "./vender/ember-data.js"
   },
   "browserify-shim": {
     "ember": {
